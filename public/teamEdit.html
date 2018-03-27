@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DB Owner Staging Area</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Google Fonts **Amaranth**-->
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+    <!--Bootswatch Theme -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/sandstone/bootstrap.min.css" rel="stylesheet" integrity="sha384-bsvEK+YNVfNd1Ld4bz9xMEEWEDQDZMLT37OAK45h+mmV4t5nT9ZFs4lPonkivNY7" crossorigin="anonymous" />
+    <!-- Link to my jQuery information -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Bootstrap JS file -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--Izimodal modal library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css" integrity="sha384-twsqDCMYZktKK4KMv8cXDnLhBCVchPMuxLKKh1azoa3vn5nKRF/8PK4GmIgD0JaW" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js" integrity="sha384-OCBM5wbr9X4XRMO0UcgNtJrfDZz4bo4c6PDZrxVN8zLSn6/B0CKZ/RUBRDDVqgt4" crossorigin="anonymous" type="text/javascript"></script>
+    <!-- responsive meta tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- font awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+</head>
+
+<body class="background2">
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-6 col-sm-6">
+                <div class="row">
+                    <legend>Team Info Section</legend>
+                    <div class="col-sm-12 col-md-12 form-group row">
+                        <label class="col-md-2 col-form-label" for="teamName">Team Name:</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" id="iTeamName" aria-describedby="teamNameInfo" placeholder="Enter your team's name">
+                        </div>
+                        <label class="col-md-2 col-form-label" for="teamName">Team Motto:</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" id="iTeamMotto" aria-describedby="teamNameInfo" placeholder="Enter your team's slogan!">
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--Moved the infomration from a table to a a-href list grouping.  Additional list shoudl be dynamically created based on need.-->
+                    <div class="col-md-6 col-sm-6">
+                        <legend>Roster Info</legend>
+                        <br>
+                        <ul class="my-scroll list-group athlete-list">
+                            <span class="athlete-container2"></span>
+                        </ul>
+                        <div class="form-group col">
+                            <fieldset disabled="">
+                                <label class="control-label" for="disabledInput"></label>
+                                <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." value="Funds Remaining: $00" disabled="">
+                            </fieldset>
+                        </div>
+                    </div>
+                    <!--==========================================table on the right=============================-->
+                    <div class="col-md-6 col-sm-6">
+                        <legend>Available Athletes</legend>
+                        <br>
+                        <ul class=" my-scroll list-group athlete-list">
+                            <span class="athlete-container1"></span>
+                        </ul>
+                        <div class="form-group col">
+                            <fieldset disabled="">
+                                <label class="control-label" for="disabledInput"></label>
+                                <input class="form-control" id="disabledInput" type="text" placeholder="Unit Cost:$" value="Unit Cost: $00" disabled="">
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col align-self-center">
+                <div class="row text-center">
+                    <legend>Active LineUp</legend>
+                    <div class="list-group active col-md-6 col-sm-6">
+                        <ul>
+                            <li id="active_athlete0" class="list-group-item athlete-item active">Athelete Data Here</li>
+                            <li id="active_athlete1" class="list-group-item athlete-item active">Athelete Data Here</li>
+                            <li id="active_athlete2" class="list-group-item athlete-item active">Athelete Data Here</li>
+                        </ul>
+                    </div>
+                    <div class="list-group col-md-6 col-sm-6">
+                        <ul>
+                            <li id="active_athlete3" class="list-group-item athlete-item active">Athelete Data Here</li>
+                            <li id="active_athlete4" class="list-group-item athlete-item active">Athelete Data Here</li>
+                            <li id="active_athlete5" class="list-group-item athlete-item active">Athelete Data Here</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 m-1 hoverToolTip">
+                        <button type="button" class="btn btn-primary btn-lg btn-block" id="btnActivate">Activite
+                                <span class="tooltiptext">Add roster Athelete to active roster</span>
+                        </button>
+                    </div>
+
+                    <div class="col-sm-12 m-1 hoverToolTip">
+                        <button type="button" class="btn btn-primary btn-lg btn-block" id="btnDeactivite">Deactivate
+                                <span class="tooltiptext">Remove an athelte from the active roster</span>
+                        </button>
+                    </div>
+                    <div class="col-sm-12 m-1 hoverToolTip">
+                        <button type="button" class="btn btn-primary btn-lg btn-block" id="btnBattle">Battle
+                                <span class="tooltiptext">To battle for glory!</span>
+                        </button>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-sm-12 m-1 hoverToolTip">
+                        <button type="button" class="btn btn-primary btn-lg btn-block" id="btnExit">Exit
+                                <span class="tooltiptext">Exit the game</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="card-footer text-center" id="footer">
+        <p>Three Corners &#x0026; One Center Group Project for University of Minnesota coding bootcamp. © 2018 Random Dream-Ball. All rights reserved.</p>
+    </div>
+
+    <!--IziToast Confirm exit-->
+
+    <!-- Additional javascript files-->
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/dreamballs.js"></script>
+    <!-- local CSS stylesheet-->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <!-- Modal required scripting info-->
+</body>
+
+</html>

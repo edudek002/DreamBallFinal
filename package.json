@@ -1,0 +1,29 @@
+{
+  "name": "random_dream-ball",
+  "version": "1.0.0",
+  "description": "Fantasy league type game for group project2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SWolfMN78/Random_Dream-Ball.git"
+  },
+  "author": "Christopher, Edyta, Walter and Shawn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SWolfMN78/Random_Dream-Ball/issues"
+  },
+  "homepage": "https://github.com/SWolfMN78/Random_Dream-Ball#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "line-by-line": "^0.1.6",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.3",
+    "node-localstorage": "^1.3.1",
+    "npm": "^5.8.0",
+    "sequelize": "^4.37.4"
+  }
+}

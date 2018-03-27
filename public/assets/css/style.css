@@ -1,0 +1,332 @@
+/*General CSS*/
+
+@import url("https://fonts.googleapis.com/css?family=Amaranth");
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #d9534f;
+    --orange: #fd7e14;
+    --yellow: #f0ad4e;
+    --green: #4BBF73;
+    --teal: #20c997;
+    --cyan: #1F9BCF;
+    --white: #fff;
+    --gray: #919aa1;
+    --gray-dark: #343a40;
+    --primary: #1a1a1a;
+    --secondary: #fff;
+    --success: #4BBF73;
+    --info: #1F9BCF;
+    --warning: #f0ad4e;
+    --danger: #d9534f;
+    --light: #fff;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: "Amaranth", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+
+/*Cover Page Specific CSS*/
+
+.background {
+    background-image: url(../img/ball1.png);
+    background-size: cover;
+    background-image: no-repeat;
+}
+
+.background2 {
+    background-image: url(../img/page2arena.jpg);
+    background-size: cover;
+    background-image: no-repeat;
+}
+
+.background3 {
+    background-image: url(../img/dreamballBK3.jpg);
+    background-size: cover;
+    background-image: no-repeat;
+}
+
+.welcImg {
+    width: 90%;
+    height: 270px;
+}
+
+#footer {
+    background-color: #666666;
+    border-top: #000000 solid 2px;
+    text-align: center;
+    width: 100%;
+    font-size: 10pt;
+    color: #ffffff80;
+    padding: 5px;
+    position: fixed;
+    bottom: 0px;
+}
+
+.hoverToolTip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.hoverToolTip .tooltiptext {
+    visibility: hidden;
+    width: 400px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    font-size: 10pt;
+}
+
+.hoverToolTip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+/*Team Editor Page CSS*/
+
+.list-group {
+    width: 75%;
+}
+
+.mySQLBtns {
+    float: left;
+}
+
+.athlete-item {
+    width: 200px;
+    height: 75px;
+}
+
+
+/*Battle Page CSS*/
+
+.btn-group-vertical {
+    display: block;
+    min-width: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: Amaranth;
+    color: #ddd;
+}
+
+.containerMod {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.winLooseImgWindow {
+    margin: 10px;
+    padding: 3px;
+}
+
+
+/*Modal Infomation*/
+
+.hide {
+    background: green;
+    width: 50px;
+    height: 30px;
+}
+
+
+/* 
+p {
+    font-size: 18px;
+} */
+
+.modal-custom {
+    display: none;
+}
+
+.modal-custom header {
+    background: #eee;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 3px 3px 0 0;
+    width: 100%;
+}
+
+.modal-custom header label {
+    display: block;
+    float: left;
+    width: 100%;
+    text-align: center;
+    background: #ddd;
+    color: #999;
+    height: auto;
+    line-height: 45px;
+    font-family: 'Lato', arial;
+    font-size: 15px;
+}
+
+.modal-custom header a.active {
+    box-shadow: inset 0 -10px 20px -10px #aaa;
+    background: #fff;
+    color: #777;
+}
+
+.modal-custom section {
+    padding: 30px;
+}
+
+.modal-custom section input:not([type="checkbox"]),
+.modal-custom section button {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    margin-bottom: 26px;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.modal-custom section button {
+    height: 46px;
+    padding: 0;
+}
+
+.modal-custom section input:focus {
+    border-color: #28CA97;
+}
+
+.modal-custom section label[for="check"] {
+    margin-bottom: 26px;
+    font-size: 14px;
+    color: #999;
+    display: block;
+}
+
+.modal-custom section footer {
+    overflow: hidden;
+}
+
+.modal-custom section button {
+    background: #28CA97;
+    color: white;
+    margin: 0;
+    border: 0;
+    cursor: pointer;
+    width: 50%;
+    float: left;
+}
+
+.modal-custom section button:hover {
+    opacity: 0.8;
+}
+
+.modal-custom section button:nth-child(1) {
+    border-radius: 3px 0 0 3px;
+    background: #aaa;
+}
+
+.modal-custom section button:nth-child(2) {
+    border-radius: 0 3px 3px 0;
+}
+
+.modal-custom .icon-close {
+    background: #FFF;
+    margin-bottom: 10px;
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    color: #a9a9a9;
+    cursor: pointer;
+}
+
+.modal-custom .icon-close:hover,
+.modal-custom .icon-close:focus {
+    color: black;
+}
+
+.modal-custom.hasScroll .icon-close {
+    display: none;
+}
+
+.iziModal .iziModal-header-title {
+    font-family: 'Lato', arial;
+    font-weight: 500;
+}
+
+
+/********** modal style **************/
+
+#custom-btnColor1 {
+    background-color: #0682fc;
+}
+
+#header-custom-rules {
+    color: white;
+    background-color: black;
+}
+
+#modal-custom-signup,
+#modal-custom-login,
+#modal-custom-rules {
+    color: white;
+    font-size: 18px;
+    background-image: url(../img/galaxy1.jpg);
+    background-size: 100% 100%;
+}
+
+
+/***** button pics *****/
+
+h1,
+strong {
+    font-size: 70px;
+    text-shadow: 2px 2px #0330e1;
+    color: white;
+}
+
+legend {
+    text-shadow: 1px 1px #fff !important;
+}
+
+legend,
+li,
+.col-form-label {
+    color: #3E3F3A;
+}
+
+button:hover,
+.updateID:hover,
+.updateRosterID:hover
+{
+  cursor: pointer;
+}
+
+#iNewAccount,
+#iExisting,
+#iRules {
+    font-size: 30px;
+    color: white;
+}
+
+.my-scroll {
+    height: 300px;
+    width: 100%;
+    overflow: scroll;
+}

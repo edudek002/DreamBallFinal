@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DB Battle!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Google Fonts **Amaranth**-->
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+    <!--Bootswatch Theme -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/sandstone/bootstrap.min.css" rel="stylesheet" integrity="sha384-bsvEK+YNVfNd1Ld4bz9xMEEWEDQDZMLT37OAK45h+mmV4t5nT9ZFs4lPonkivNY7" crossorigin="anonymous" />
+    <!-- Link to my jQuery information -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Bootstrap JS file -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--Izimodal modal library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css" integrity="sha384-twsqDCMYZktKK4KMv8cXDnLhBCVchPMuxLKKh1azoa3vn5nKRF/8PK4GmIgD0JaW" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js" integrity="sha384-OCBM5wbr9X4XRMO0UcgNtJrfDZz4bo4c6PDZrxVN8zLSn6/B0CKZ/RUBRDDVqgt4" crossorigin="anonymous" type="text/javascript"></script>
+    <!-- responsive meta tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- font awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+</head>
+
+
+<body class="background">
+    <div class="container containerMod">
+        <div class="row">
+            <div class="col col-md-4 col-sm-4">
+                <div class="text-center teamName">
+                    <h2>Owner's Team</h2>
+                </div>
+            </div>
+            <div class="col col-md-4 col-sm-4">
+            </div>
+            <div class="col col-md-4 col-sm-4">
+                <div class="text-center teamName">
+                    <h2>Combatant Team</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-4 col-sm-4">
+                <div class="playerBtn">
+                    <div class="btn-group-vertical" data-toggle="buttons">
+                        <button id="b_owner_athlete0" type="button" class="btn btn-primary btn-lg btn-block">Athlete1</button>
+                        <button id="b_owner_athlete1" type="button" class="btn btn-primary btn-lg btn-block">Athlete2</button>
+                        <button id="b_owner_athlete2" type="button" class="btn btn-primary btn-lg btn-block">Athlete3</button>
+                        <button id="b_owner_athlete3" type="button" class="btn btn-primary btn-lg btn-block">Athlete4</button>
+                        <button id="b_owner_athlete4" type="button" class="btn btn-primary btn-lg btn-block">Athlete5</button>
+                        <button id="b_owner_athlete5" type="button" class="btn btn-primary btn-lg btn-block">Athlete6</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-sm-4">
+                <!--Image will go here for what happens via win or lose-->
+                <div class="winLoseImgWindow">
+                    <!--Image to be placed here based on win/lose-->
+                    <img style="height: 150px; width: 80%; display: block;" id="iWinLoseSection" src="#" alt="Card image">
+                </div>
+                <div class="card-body textResultDisplay">
+                    <h4 class="card-text center-align">Results will be displayed here ID- You won!!</h4>
+                </div>
+            </div>
+            <div class="col col-md-4 col-sm-4">
+                <div class="btn-group-vertical" data-toggle="buttons">
+                    <button id="b_other_athlete0" type="button" class="btn btn-primary btn-lg btn-block disabled">Athlete 1</button>
+                    <button id="b_other_athlete1" type="button" class="btn btn-primary btn-lg btn-block disabled">Athlete 2</button>
+                    <button id="b_other_athlete2" type="button" class="btn btn-primary btn-lg btn-block disabled">Athlete 3</button>
+                    <button id="b_other_athlete3" type="button" class="btn btn-primary btn-lg btn-block disabled">Athlete 4</button>
+                    <button id="b_other_athlete4" type="button" class="btn btn-primary btn-lg btn-block disabled">Athlete 5</button>
+                    <button id="b_other_athlete5" type="button" class="btn btn-primary btn-lg btn-block disabled">Athlete 6</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-4 col-sm-4 text-center">
+                <fieldset disabled="">
+                    <label class="col-form-label col-form-label-lg disabledInput" for="inputLarge">Player Score</label>
+                    <input class="form-control text-center" id="iPlayerScoreField" type="text" placeholder="score: 00" disabled="">
+                </fieldset>
+            </div>
+            <div class="col col-md-4 col-sm-4">
+
+            </div>
+            <div class="col col-md-4 col-sm-4 text-center">
+                <div class="form-group">
+                    <label class="col-form-label col-form-label-lg disabledInput" for="inputLarge">Combatant's Score</label>
+                    <input class="form-control text-center" id="iGameScoreField" type="text" placeholder="Score: 00" disabled="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="card-footer text-center" id="footer">
+        <p>Three Corners &#x0026; One Center Group Project for University of Minnesota coding bootcamp. © 2018 Random Dream-Ball. All rights reserved.</p>
+    </div>
+
+    <!-- Additional javascript files-->
+    <script type="text/javascript" src="assets/js/play_game.js"></script>
+    <!-- local CSS stylesheet-->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <!-- Modal required scripting info-->
+</body>
+
+</html>

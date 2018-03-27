@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DB Cover</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Google Fonts **Amaranth**-->
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+    <!--Bootswatch Theme -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/sandstone/bootstrap.min.css" rel="stylesheet" integrity="sha384-bsvEK+YNVfNd1Ld4bz9xMEEWEDQDZMLT37OAK45h+mmV4t5nT9ZFs4lPonkivNY7" crossorigin="anonymous" />
+    <!-- Link to my jQuery information -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Bootstrap JS file -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--Izimodal modal library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css" integrity="sha384-twsqDCMYZktKK4KMv8cXDnLhBCVchPMuxLKKh1azoa3vn5nKRF/8PK4GmIgD0JaW" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js" integrity="sha384-OCBM5wbr9X4XRMO0UcgNtJrfDZz4bo4c6PDZrxVN8zLSn6/B0CKZ/RUBRDDVqgt4" crossorigin="anonymous" type="text/javascript"></script>
+    <!-- responsive meta tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+
+<body class="background">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 p-5">
+                <h1 align="center"><strong>Random Dream-Ball!</strong></h1>
+                <h1 align="center"><strong>Your Fantasy Battle League</strong></h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 col-md-4 text-center">
+                <a href="#" id="iNewAccount">
+                    <img src="assets/img/digiball.jpeg" class="img-thumbnail welcImg" alt="New User Account">
+                    <div class="centered hoverToolTip">New User Account
+                        <span class="tooltiptext">Make a new acount</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-sm-4 col-md-4 text-center">
+                <a href="#" id="iExisting">
+                    <img src="assets/img/BattleBall.jpg" class="img-thumbnail welcImg" alt="Welcome Login">
+                    <div class="centered hoverToolTip">Welcome Login
+                        <span class="tooltiptext">Log back in with your account and password</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-sm-4 col-md-4 text-center">
+                <a href="#" id="iRules">
+                    <img src="assets/img/DreamBall-Final.jpg" class="img-thumbnail welcImg" alt="Rules">
+                    <div class="centered hoverToolTip">Game Rules
+                        <span class="tooltiptext">View the Game Rules</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="card-footer text-center" id="footer">
+        <p>Three Corners &#x0026; One Center Group Project for University of Minnesota coding bootcamp. © 2018 Random Dream-Ball. All rights reserved.</p>
+    </div>
+
+    <!--Modal structure for the buttons-->
+    <!--Signup Modal-->
+    <div id="modal-custom-signup" class="modal-custom">
+        <button data-iziModal-close class="icon-close">X</button>
+        <header>
+            <label id="header-custom-rules">Please Sign Up!</label>
+        </header>
+        <div>
+            <section>
+                <!--Get the user's Password Info-->
+                <input type="text" placeholder="Username" id="create_name">
+                <!--Get the user's selected password-->
+                <input type="password" placeholder="Password - limit 10 characters" id="create_pass">
+                <!--Have the user confirm their password-->
+                <input type="password" placeholder="Retype Password - limit 10 characters" id="create_verify">
+                <label for="check"><input type="checkbox" name="checkbox" id="check" value="1"> I agree to the <u>Terms</u> of this game.</label>
+                <footer>
+                    <button data-iziModal-close id="header-custom-rules">Cancel</button>
+                    <button class="submit" id="custom-btnSignup">Create Account</button>
+                </footer>
+            </section>
+        </div>
+    </div>
+
+    <!--Login Modal-->
+    <div id="modal-custom-login" class="modal-custom">
+        <button data-iziModal-close class="icon-close">X</button>
+        <header>
+            <label id="header-custom-rules">Please Login!</label>
+        </header>
+        <div>
+            <section>
+                <!--Get the user's Name Info-->
+                <input type="text" placeholder="Username" id="login_name">
+                <!--Get the user's Password Info-->
+                <input type="password" placeholder="Password" id="login_pass">
+                <!--Get the user's agreement to game terms and conditions Info-->
+                <footer>
+
+                    <button data-iziModal-close data-iziModal-transitionOut="bounceOutDown" id="header-custom-rules">Cancel</button>
+                    <button class="submit" id="custom-btnLogin">Log in</button>
+
+                </footer>
+            </section>
+        </div>
+    </div>
+
+    <!-- modal here for the rules page ** Come back to this once the above information has been figured out**-->
+    <div id="modal-custom-rules" class="modal-custom">
+        <button data-iziModal-close class="icon-close">X</button>
+        <header>
+            <label id="header-custom-rules">Da'Rules</label>
+        </header>
+        <div>
+            <section>
+                <!--Display the rules-->
+                <p>Game Rules:</p>
+                <p>Welcome to Random Dream Ball &ndash; Your Fantasy Battle League.</p>
+                <p>You are the owner of a galactic dream-ball team and your management skills will determine your success in the Universe!!!</p>
+                <p>If this is your first time entering the battle field we strongly suggest you log in as a new owner (with credit card in hand) and provide us with your very intimate personal information so that we can inundate you with expansive universes,
+                    galactic features, and pumped-up galactic superheroes.</p>
+                <p>If this is not your first time playing Random Dream Ball, then click on the existing owner button and let&rsquo;s begin the FANTASY!!!</p>
+                <p>It is time to select your team:&nbsp;</p>
+                <ul>
+                    <li>You have 50 credits to select an incredible dream-ball team.</li>
+                    <li>Use the scroll down menu to view the players available to draft, use them credits wisely as some players have special skills called blockers and bruisers.
+                        <ul>
+                            <li>Blockers &ndash; Prevent scoring by non-Blockers.</li>
+                            <li>Bruisers &ndash; Injure an opponent for 2 games, but highest skilled player still scores.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Select 6 Battle League superheroes and up to 6 benchwarmers (12 max). Will need them bench warming heroes for when a bruiser knocks your player out for 2 games.</li>
+                    <li>Now that you selected your team you have time now to review your team&rsquo;s stats and determine if you need to make any Dream-Ball trades.</li>
+                    <li>If a trade is needed highlight the player and send him back to the draft pile</li>
+                    <li>Once your confident in your selections let&rsquo;s begin the Greatest Dream-Ball Battle in the Universe!!!</li>
+                    <li>Press &ldquo;Begin the BATTLE&rdquo;.</li>
+                </ul>
+                <footer>
+                    <button data-iziModal-close data-iziModal-transitionOut="bounceOutDown" id="header-custom-rules">Exit</button>
+                </footer>
+            </section>
+        </div>
+    </div>
+
+    <!-- Additional javascript files-->
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <!-- local CSS stylesheet-->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <!-- Modal required scripting info-->
+</body>
+
+</html>
